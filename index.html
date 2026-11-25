@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chengyao Wang — Networking &amp; Distributed Computing</title>
+  <meta name="description" content="Personal page of Chengyao Wang, student of Networking and Distributed Computing at Xi'an Jiaotong-Liverpool University." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">CW<span>.</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Networking &amp; Distributed Computing</p>
+        <h1>Chengyao Wang</h1>
+        <p class="lead">
+          I build small systems and then measure how they behave on the wire —
+          from raw TCP and UDP sockets to MapReduce and Spark pipelines.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn ghost" href="https://github.com/Kireat" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Focus</dt><dd>Transport protocols, distributed data</dd></div>
+          <div><dt>Tools</dt><dd>Python, Java, Spark, Wireshark</dd></div>
+          <div><dt>Based in</dt><dd>Suzhou, China</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <div class="two-col">
+          <p>
+            I am an undergraduate at Xi'an Jiaotong-Liverpool University, studying
+            networking and distributed computing. My interest is in the gap between
+            what a protocol promises and what actually happens once packets leave
+            the application: retransmissions, buffering, queueing and the latency
+            that users feel.
+          </p>
+          <p>
+            Most of my work starts with a measurement. A streaming client is only
+            useful if I can show its frame latency distribution; a word count is
+            only interesting if I can explain why Spark finishes a job that Hadoop
+            spends minutes on. This page collects the projects where I did both.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>TCP vs UDP video streaming</h3>
+            <p>
+              A Python socket application that streams 720p video as JPEG frames,
+              with length-prefixed framing over TCP and MTU-safe fragmentation over
+              UDP. Frame latency, jitter and drop rate were measured for both
+              transports and cross-checked against Wireshark captures.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>Sockets</li><li>Wireshark</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>MapReduce, Hadoop and Spark</h3>
+            <p>
+              A word-count pipeline implemented three ways: from scratch in standard
+              Python, with Hadoop Streaming on a pseudo-distributed cluster, and with
+              Spark. The same corpus was run at three sizes to compare execution
+              models rather than just wall-clock time.
+            </p>
+            <ul class="tags">
+              <li>Hadoop</li><li>Spark</li><li>HDFS</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Income classification with Spark MLlib</h3>
+            <p>
+              An end-to-end pipeline on the UCI Adult dataset: categorical encoding,
+              feature assembly, cross-validated logistic regression and a tree
+              ensemble, evaluated with precision, recall, F1 and AUC rather than
+              accuracy alone.
+            </p>
+            <ul class="tags">
+              <li>MLlib</li><li>scikit-learn</li><li>Pandas</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skill-groups">
+          <div>
+            <h3>Languages</h3>
+            <p>Python, Java, SQL, JavaScript, Bash</p>
+          </div>
+          <div>
+            <h3>Networking</h3>
+            <p>TCP/IP, UDP, DNS, TLS, Wireshark, Npcap</p>
+          </div>
+          <div>
+            <h3>Data</h3>
+            <p>Hadoop, Spark, Hive, Pandas, scikit-learn</p>
+          </div>
+          <div>
+            <h3>Environment</h3>
+            <p>Linux, Git, VMware, Docker</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="contact">
+      <div class="wrap contact">
+        <h2>Contact</h2>
+        <p>
+          The quickest way to reach me is through GitHub. I am happy to talk about
+          transport protocols, distributed data processing, or anything that
+          involves a packet capture.
+        </p>
+        <a class="btn primary" href="https://github.com/Kireat" target="_blank" rel="noopener">github.com/Kireat</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Chengyao Wang. Built as part of CSI205TC coursework.</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
